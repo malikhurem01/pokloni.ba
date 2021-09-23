@@ -1,0 +1,18 @@
+<%-include('./includes/head.ejs') %>
+  </head>
+  <body>
+    <%-include('./includes/navigation.ejs') %>
+    <form class="form-control" action="/login" method="post">
+    <input class="form-field" type="email" name="email" placeholder="Email: ">
+    <input class="form-field" type="password" name="password" placeholder="Password: ">
+      <%if(error){%>
+    <div style="text-align: center">
+      <p style="margin: 0 auto;">
+        Login failed
+      </p>
+    </div>
+      <%}%>
+    <input class="form-field btn" type="submit" value="Naprijed">
+
+    </form>        
+<%-include('./includes/end.ejs') %>

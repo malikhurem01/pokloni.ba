@@ -1,0 +1,21 @@
+<%-include('./includes/head.ejs') %>
+  </head>
+  <body>
+    <%-include('./includes/navigation.ejs') %>
+    <form class="form-control" action="/signup" method="post">
+          <input class="form-field" type="name" name="name" placeholder="Ime: ">
+    <input class="form-field" type="lastName" name="lastName" placeholder="Prezime: ">
+    <input class="form-field" type="email" name="email" placeholder="Email: ">
+    <input class="form-field" type="password" name="password" placeholder="Password: ">
+    <input class="form-field" type="password" name="confirmPassword" placeHolder="Confirm Password">
+          <%if(error){%>
+    <div style="text-align: center">
+      <p style="margin: 0 auto;">
+        Registration failed
+      </p>
+    </div>
+      <%}%>
+
+    <input class="form-field btn" type="submit" value="Registruj se">
+    </form>
+        <%-include('./includes/end.ejs') %>

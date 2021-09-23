@@ -1,0 +1,143 @@
+.header {
+  width: 100%;
+  padding: 1.7%;
+  background-color: #32de84;
+  position: relative;
+}
+.nav-bar__header {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2.4%;
+}
+.nav-bar__header ul li {
+  display: inline-block;
+  padding: 0 15px 0 0;
+}
+
+.gift-card {
+  margin: 40px;
+  padding: 10px;
+  margin-left: 45px;
+  float: left;
+  width: 27.5%;
+  height: 50vh;
+  text-align: center;
+  background-color: #32de84;
+  border: solid #32de84;
+  border-radius: 5px;
+}
+.gift-card-title {
+  margin-bottom: 10px;
+}
+.gift-card-title p {
+  color: rgb(232, 232, 232);
+  font-size: 35px;
+}
+.gift-card-img img {
+  border-radius: 10px;
+  width: 280px;
+  height: 180px;
+}
+.gift-card-desc {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+}
+.gift-card-desc p {
+  font-size: 20px;
+}
+.btn {
+  text-decoration: none;
+  color: #32de84;
+  display: inline-block;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 6.5px;
+}
+form .btn {
+  padding: 7px;
+}
+form {
+  display: inline-block;
+}
+.form-control {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  margin: 25px;
+  padding: 10px;
+  display: inline-block;
+}
+.form-control input,
+.form-control textarea {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  width: 20rem;
+}
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+form .btn {
+  border: solid 2px #32de84;
+  display: inline-block;
+}
+.nav-bar__header ul li a,
+.input-btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 23px;
+  transform: all 0.5s;
+}
+.nav-bar__header ul li a:hover,
+.input-btn {
+  color: rgb(80, 80, 80);
+}
+.title {
+  font-family: 'Arial';
+  font-size: 50px;
+  color: #fff;
+  margin-left: 22px;
+}
+* {
+  font-family: Arial, Helvetica;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section .myImage {
+  position: absolute;
+  top: 25vh;
+  left: 5%;
+  border-radius: 5rem;
+}
+section .myImage img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+section .myInfo {
+  position: absolute;
+  left: 35%;
+  top: 26vh;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  border: solid black;
+  width: 500px;
+}
+
+section .formDelete {
+  position: absolute;
+  top: 80vh;
+  left: 36%;
+}

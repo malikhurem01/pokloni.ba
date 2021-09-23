@@ -1,0 +1,14 @@
+<%-include('./includes/head.ejs') %>
+  </head>
+  <body>
+    <%-include('./includes/navigation.ejs') %>
+    <form class="form-control" action="/gifts/<% if(editing) {%>edit-gift<%}else{%>add-gift<%}%>" method="POST" enctype="multipart/form-data">
+      <input class="form-field" type="text" name="title" placeholder="Naziv poklona:" value="<% if (editing) { %><%= gift.title %><% } %>">
+      <input class="form-field" type="file" name="image" placeholder="Slika:">
+      <textarea class="form-field" type="text" name="description" placeholder="Opis: " rows="7"><% if (editing) { %><%= gift.description %><% } %></textarea>
+      <input class="form-field btn" type="submit" value="<% if(editing){%>Uredi<%}else{%>Dodaj novi<%}%>">
+      <% if(editing) {%>
+        <input type="hidden" name="giftId" value="<%=gift._id%>">
+        <%}%>
+    </form>
+<%-include('./includes/end.ejs') %>

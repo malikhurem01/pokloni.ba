@@ -1,0 +1,31 @@
+<%-include('./includes/head.ejs') %>
+  </head>
+  <body>
+    <%-include('./includes/navigation.ejs') %>
+  </head>
+  <body>
+    <!-- navigacija -->
+    <section>
+      <div class="myImage">
+        <img
+          src="<%= image %>"
+          alt="NoImage"
+        />
+      </div>
+      <div class="myInfo">
+        <h3>My Info</h3>
+        <p>First name: <%= user.firstName %></p>
+        <p>Last name: <%= user.lastName %></p>
+        <p>Email: <%= user.email %></p>
+        <p>Joined: <%= user.joined %></p>
+      </div>
+      <div class="formDelete">
+        <form action="/delete-user-account" method="POST">
+          <input type="submit" value="Delete account" />
+          <input type="checkbox" name="confirmDelete" required/>
+          <input type="hidden" name="id" value="<%=user._id%>">
+          <label for="confirmDelete">I want to delete my account.</label>
+        </form>
+      </div>
+    </section>        
+    <%-include('./includes/end.ejs') %>

@@ -1,0 +1,27 @@
+<header class="header">
+  <h1 class="title">
+    <%= pageTitle.split('|')[1].trim() %>
+  </h1>
+<nav class="nav-bar__header">
+    <ul>
+      <li><a href="/">Početna stranica<a></li>
+        <li><a href="/gifts/list">Lista poklona</a></li>
+        <%if(isAuthenticated){%>
+        <li><a href="/gifts/add-gift">Dodaj poklon</a></li>
+        <li><a href="/gifts/my-gifts">Moji pokloni</a></li>
+        <%}%>
+        <%if(!isAuthenticated){%>
+        <li><a href="/signup">Registruj se</a></li>
+        <%}%>
+        <%if(isAuthenticated){%>
+          <li>
+            <form action="/logout" method="post">
+              <input class="input-btn" type="submit" value="Odjavi se">
+            </form>
+          </li>
+        <%}else{%>
+        <li><a href="/login">Uloguj se</a></li>
+        <%}%>
+    </ul>
+</nav>
+</header>

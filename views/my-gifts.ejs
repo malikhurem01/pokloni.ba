@@ -1,0 +1,27 @@
+<%-include('./includes/head.ejs') %>
+  </head>
+  <body>
+    <%-include('./includes/navigation.ejs') %>
+    <% if(gifts.length) {%>
+    <main>
+    <% gifts.forEach(gift => { %>
+        <article class="gift-card clearfix">
+            <div class="gift-card-title">
+                <p><%=gift.title%></p>
+            </div>
+            <div class="gift-card-img"><img src="/<%=gift.imageUrl%>" alt="Image"></div>
+            <div class="gift-card-desc"><p><%=gift.description%></p></div>
+            <div>
+                <a class="btn" href="/gifts/edit-gift/<%=gift._id%>?editing=true">Uredi</a>
+                <form action="/gifts/delete-gift" method="post">
+                    <input type="hidden" name="giftId" value="<%=gift._id%>">
+                    <input class="btn" type="submit" value="Ukloni">
+                </form>
+            </div>
+        </article>
+    <%}) %>
+    </main>
+    <%}else{%>
+        <h1 class="title" style="color:brown; margin: 48px;">No gifts found!</p>
+    <%}%>
+    <%-include('./includes/end.ejs') %>
